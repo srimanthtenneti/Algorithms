@@ -1,0 +1,15 @@
+#### Info: ####
+-> This is a slow sorting algorithm(because of nested loops)
+-> Running time- O(n^2)
+-> Works for small datasets(<=10000)
+
+#### Python Code: ####
+def selection_sort(A):
+    for i in range(0,len(A)-1):
+        minIndex = i
+        for j in range(i+1,len(A)):
+            if(A[j]<A[minIndex]):
+                minIndex = j
+                if(minIndex!=i):
+                    A[i],A[minIndex] = A[minIndex],A[i]
+  
